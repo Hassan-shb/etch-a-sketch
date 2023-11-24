@@ -5,10 +5,12 @@ body{
     align-items: center;
 }
 .container{
-    box-sizing: border-box;
     width: 256px;
     height: 256px;
     background: blue;
     display: flex;
     flex-wrap: wrap;
+}
+.pixel{
+    box-sizing: border-box;
 }
