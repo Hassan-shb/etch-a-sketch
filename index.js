@@ -3,7 +3,18 @@ const comStyle = window.getComputedStyle(container);
 let colorPicker = document.getElementById('myColor');
 const myEraser = document.getElementById('myEraser');
 const rainbow = document.getElementById('Rainbow');
+const sliderLabel = document.querySelector('.sliderLabel');
 const colorMode = document.getElementById('colorMode');
+const slider = document.querySelector('.slider');
+
+
+createGrid(slider.value);
+sliderLabel.textContent = `${slider.value}x${slider.value}`;
+slider.addEventListener('mousemove', () => {sliderLabel.textContent = `${slider.value}x${slider.value}`});
+slider.addEventListener('change', () => {
+    container.innerHTML = '';
+    createGrid(slider.value);
+})
 colorMode.checked = true;
 
 let isRainbow = false;
@@ -21,7 +32,6 @@ function createAGrid(item) {
     pixel.style.border = "0.5px solid gray";
     pixel.style.background = "pink";
     pixel.classList.add("colorGrid");
-    
     pixel.addEventListener("mousedown", (e) => {
         if(myEraser.checked == true){
             e.target.style.background = "pink";
@@ -74,5 +84,5 @@ function createGrid(size) {
         createAGrid(size);
     }
 }
-createGrid(20);
+
 
