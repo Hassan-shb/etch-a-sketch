@@ -6,10 +6,18 @@ const rainbow = document.getElementById('Rainbow');
 const sliderLabel = document.querySelector('.sliderLabel');
 const colorMode = document.getElementById('colorMode');
 const slider = document.querySelector('.slider');
+const resetBtn = document.querySelector('.reset');
+
+
+resetBtn.addEventListener('click', () => {
+    container.innerHTML = "";
+    slider.value = 16;
+    sliderLabel.textContent = `${slider.value}x${slider.value}`;
+    createGrid(16);
+});
 
 
 createGrid(slider.value);
-sliderLabel.textContent = `${slider.value}x${slider.value}`;
 slider.addEventListener('mousemove', () => {sliderLabel.textContent = `${slider.value}x${slider.value}`});
 slider.addEventListener('change', () => {
     container.innerHTML = '';
