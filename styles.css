@@ -11,6 +11,6 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-.pixel{
+.colorGrid{
     box-sizing: border-box;
 }
