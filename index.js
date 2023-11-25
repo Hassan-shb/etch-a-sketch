@@ -3,6 +3,9 @@ const comStyle = window.getComputedStyle(container);
 let colorPicker = document.getElementById('myColor');
 const myEraser = document.getElementById('myEraser');
 const rainbow = document.getElementById('Rainbow');
+const colorMode = document.getElementById('colorMode');
+colorMode.checked = true;
+
 let isRainbow = false;
 let rainbowColor;
 let selectedColor = colorPicker.value;
@@ -29,14 +32,16 @@ function createAGrid(item) {
             rainbowColor = rainbowGenerator();
             changeColor(rainbowColor);
             isDrawing = true;
-        }else{
+        }else if(colorMode.checked == true){
             colorPicker.addEventListener('input', function() {
                 selectedColor = colorPicker.value;
             });
             e.target.style.background = selectedColor;
             isDrawing = true;
             changeColor(selectedColor);
-        }  
+        } else{
+            console.log("do nothing");
+        }
         
     });
     pixel.addEventListener("mouseup", () => {
