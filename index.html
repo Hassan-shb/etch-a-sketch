@@ -8,18 +8,53 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="slidecontainer">
-        <label for="slider" class="sliderLabel">16x16</label>
-        <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
-    </div>
-    <input type="color" id="myColor" name="myColor">
-    <input type="radio" id="colorMode" name="myEraser" value="color">
-    <input type="radio" id="myEraser" name="myEraser" value="hello">
-    <input type="radio" id="Rainbow" name="myEraser" value="Rainbow">
-    <button class="reset">Reset</button>
-    <div class="container">
-
-    </div>
+    <div class="overall_container">
+        <h1>Sketch your imagination</h1>
+        <!-- SLIDER -->
+        <div class="column_divider">
+            <div class="left_column">
+                <div class="resizer">
+                    <div class="slidecontainer">
+                        <label for="slider" class="sliderLabel">16 x 16</label>
+                        <input type="range" min="1" max="64" value="16" class="slider" id="myRange">
+                    </div>
+                    <!-- Color Picker -->
+                    <div>
+                        <input type="color" id="myColor" name="myColor">
+                    </div>
+                    <!-- color mode radio -->
+                    <div>
+                        <input type="radio" id="colorMode" name="myEraser" value="color"> 
+                        <label for="myEraser">Color Mode</label>
+                    </div>
+                    <!-- Rainbow mode Radoi -->
+                    <div>
+                        <input type="radio" id="Rainbow" name="myEraser" value="Rainbow">
+                        <label for="myEraser">Rainbow Mode</label>
+                    </div>
+                    <!-- Eraser mode radio -->
+                    <div>
+                        <input type="radio" id="myEraser" name="myEraser" value="hello">
+                        <label for="myEraser">Eraser Mode</label>
+                    </div>
+                    <!-- Reset Button -->
+                    <div>
+                        <button class="reset">Reset</button>
+                    </div>
+                    
+                    
+                    
+                </div>
+                
+            </div>
+            <!-- THE GRID -->
+            <div class="right_column">
+                <div class="container">
+                    
+                </div>
+            </div>
+        </div>
+    </div> 
     
 </body>
 </html>

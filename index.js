@@ -18,7 +18,7 @@ resetBtn.addEventListener('click', () => {
 
 
 createGrid(slider.value);
-slider.addEventListener('mousemove', () => {sliderLabel.textContent = `${slider.value}x${slider.value}`});
+slider.addEventListener('mousemove', () => {sliderLabel.textContent = `${slider.value} x ${slider.value}`});
 slider.addEventListener('change', () => {
     container.innerHTML = '';
     createGrid(slider.value);
@@ -37,14 +37,13 @@ function createAGrid(item) {
     let height = width;
     pixel.style.width = width;
     pixel.style.height = height;
-    pixel.style.border = "0.5px solid gray";
-    pixel.style.background = "pink";
+    pixel.style.background = "white";
     pixel.classList.add("colorGrid");
     pixel.addEventListener("mousedown", (e) => {
         if(myEraser.checked == true){
-            e.target.style.background = "pink";
+            e.target.style.background = "white";
             isDrawing = true;
-            changeColor("pink");
+            changeColor("white");
         }else if(rainbow.checked == true){
             e.target.style.background = rainbowGenerator();
             rainbowColor = rainbowGenerator();
